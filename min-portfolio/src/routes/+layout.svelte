@@ -1,7 +1,7 @@
 
 
 
-<nav class="flex w-full justify-center mt-4">
+<nav class="flex w-full justify-center mt-8">
     <div class="flex felx-col justify-between w-11/12 h-10">
         <div class="w-20 h-full text-text">
             Social
