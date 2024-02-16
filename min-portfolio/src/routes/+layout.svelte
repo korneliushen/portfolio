@@ -7,7 +7,7 @@
             Social
         </div>
         <div class="h-full flex space-x-20">
-            <a href="/">
+            <a href="https://github.com/korneliushen?tab=repositories">
                 <p class="text-text text-2xl">Prosjekter</p>
             </a>
             <a href="/">

@@ -4,11 +4,8 @@
 </script>
 
 
-<main class="w-screen flex">
-    <section class="  h-[70em] w-3/12">
-        <div></div>
-    </section>
-    <section class="w-5/12 h-[70em]  flex flex-col justify-center space-y-10 text-text">
+<main class="w-screen snap-mandatory  overflow-x-hidden overflow-y-scroll flex flex-col items-center">
+    <section class="w-5/12 h-[70em] snap-center flex flex-col justify-center space-y-10 text-text">
       <div>
         <h3 class="text-3xl">Hei jeg heter</h3>
         <h1 class="text-9xl">Henrik</h1>
@@ -27,6 +24,12 @@
       <div class="space-x-4">
         <button class="w-32 h-12 bg-secondary rounded-lg text-lg">Prosjekter</button>
         <button class="w-32 h-12 border-accent border-[1px] rounded-lg text-lg">Om meg</button>
+      </div>
+    </section>
+    <section class="w-8/12 h-screen flex flex-col items-center justify-center snap-start">
+      <div class="w-1/6 h-1/6 flex flex-col space-y-2">
+        <h2 class="text-text text-5xl">Om meg</h2>
+        <span class="text-text text-xl">Jeg går IMIT på Elvebakken vgs. Jeg liker å løse problemer ved bruk av webutvikling og utvikle morsomme og nyttige applikasjoner </span>
       </div>
     </section>
 </main>
