@@ -4,7 +4,7 @@
 </script>
 
 
-<main class="w-screen snap-mandatory  overflow-x-hidden overflow-y-scroll flex flex-col items-center">
+<main class=" scroll-smooth w-screen snap-mandatory  overflow-x-hidden overflow-y-scroll flex flex-col items-center">
     <section class="w-5/12 h-[70em] snap-center flex flex-col justify-center space-y-10 text-text">
       <div>
         <h3 class="text-3xl">Hei jeg heter</h3>
@@ -22,14 +22,41 @@
         </div>
       </div>
       <div class="space-x-4">
-        <button class="w-32 h-12 bg-secondary rounded-lg text-lg">Prosjekter</button>
-        <button class="w-32 h-12 border-accent border-[1px] rounded-lg text-lg">Om meg</button>
+        <a href="#prosjekter">
+          <button class="w-32 h-12 bg-secondary rounded-lg text-lg">Prosjekter</button>
+        </a>
+        <a href="#om-meg">
+          <button class="w-32 h-12 border-accent border-[1px] rounded-lg text-lg">Om meg</button>
+        </a>
       </div>
     </section>
-    <section class="w-8/12 h-screen flex flex-col items-center justify-center snap-start">
+    <section id="om-meg" class="w-8/12 h-screen flex flex-col items-center justify-center snap-start">
       <div class="w-1/6 h-1/6 flex flex-col space-y-2">
-        <h2 class="text-text text-5xl">Om meg</h2>
+        <h2 class="text-text text-5xl ">Om meg</h2>
         <span class="text-text text-xl">Jeg går IMIT på Elvebakken vgs. Jeg liker å løse problemer ved bruk av webutvikling og utvikle morsomme og nyttige applikasjoner </span>
+      </div>
+    </section>
+    <section id="prosjekter" class="w-8/12 h-screen flex flex-col space-y-8 items-center justify-center snap-start">
+      <h2 class="text-text text-6xl">Mine prosjekter</h2>
+      <div class="flex space-x-8 items-center justify-center">
+        <a href="https://github.com/korneliushen/handlelapp">
+          <div class="h-80 w-96 border-primary border-2 rounded-3xl flex flex-col space-y-3 p-5">
+            <h3 class="text-text underline decoration-accent text-4xl">Handlelapp</h3>
+            <span class="text-text text-lg">
+              Nettside for å sjekke pris på daglivarer
+            </span>
+            <img class="rounded" src="https://i.ibb.co/zVmNB2t/handlelapp-forside.webp" alt="handlelapp-forside" border="0">
+          </div>
+        </a>
+        <a href="https://github.com/korneliushen/geoguessr-extension">
+          <div class="h-80 w-96 border-primary border-2 rounded-3xl flex flex-col space-y-3 p-5">
+            <h3 class="text-text underline decoration-accent text-4xl">Geoguessr Chrome extension</h3>
+            <span class="text-text text-lg">
+              Chrome extension for å lagre geoguessr games slik at man enklere kan være med
+            </span>
+            <img class="text-text" alt="Ingen bilder ennå" border="0">
+          </div>
+        </a>
       </div>
     </section>
 </main>

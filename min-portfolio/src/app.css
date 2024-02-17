@@ -10,10 +10,10 @@
     li {
       @apply table-cell relative px-0 py-[15px];
     }
-    a {
+    .nav {
       @apply uppercase no-underline tracking-[0.15em] inline-block relative px-5 py-[5px] after:content-[""] after:block after:h-0.5 after:absolute after:w-0 after:left-2/4 after:bottom-0 hover:after:w-full hover:after:left-0;
     }
-    a:after {
+    .nav:after {
       background: none repeat scroll 0 0 transparent;
       background: #f4e515;
       transition: width 0.3s ease 0s, left 0.3s ease 0s;
