@@ -116,9 +116,9 @@
       </a>
     </div>
   </section>
-  <h1 class="text-text">
-    Your ip and other stats{(ip, data.deviceInfo[0])}
-  </h1>
+  <h1 class="text-text">Your ip and other stats</h1>
+  <p class="text-text">{ip.ip}</p>
+  <p class="text-text">{data.deviceInfo.userAgent}</p>
   <p class="text-text">
     {latitude}, {longitude}
   </p>
