@@ -3,18 +3,30 @@
   import MaterialSymbolsLocationOn from "~icons/material-symbols/location-on";
   import { onMount } from "svelte";
 
-  let data = { ip: 0, deviceInfo: "" };
-
+  let data = { deviceInfo: "" };
+  let longitude = "";
+  let latitude = "";
+  let ip = "";
   onMount(async function () {
-    const res = await fetch("https://www.api.ipify.org?format=json");
-    const { ip } = await response.json();
-
+    const res = await fetch("https://api.ipify.org?format=json", {
+      method: "GET",
+    });
+    ip = await res.json();
+    navigator.geolocation.getCurrentPosition((position) => {
+      console.log(position.coords.latitude, position.coords.longitude);
+      latitude = position.coords.latitude;
+      longitude = position.coords.longitude;
+      console.log("test: ", latitude, longitude);
+    });
+    console.log(ip);
     const deviceInfo = {
       userAgent: navigator.userAgent,
       screenWidth: window.screen.width,
       screenHeight: window.screen.width,
+      userAgent: navigator.userAgent,
     };
-    data = { ip, deviceInfo };
+    console.log(deviceInfo);
+    data = { deviceInfo };
   });
 </script>
 
@@ -104,7 +116,17 @@
       </a>
     </div>
   </section>
-  <h1>Your ip and other stats{data}</h1>
+  <h1 class="text-text">
+    Your ip and other stats{(ip, data.deviceInfo[0])}
+  </h1>
+  <p class="text-text">
+    {latitude}, {longitude}
+  </p>
+  <a
+    href="https://www.google.com/maps/search/{latitude}+{longitude}/@59.9187137,10.7536475,17z?entry=ttu"
+  >
+    <button class="h-24 w-44 bg-accent rounded-full">Track yourself</button>
+  </a>
 </main>
 
 <style lang="postcss">
