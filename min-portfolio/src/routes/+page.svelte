@@ -1,40 +1,13 @@
 <script>
   import BxsSchool from "~icons/bxs/school";
   import MaterialSymbolsLocationOn from "~icons/material-symbols/location-on";
-  import { onMount } from "svelte";
-
-  let data = { deviceInfo: "" };
-  let longitude = "";
-  let latitude = "";
-  let ip = "";
-  onMount(async function () {
-    const res = await fetch("https://api.ipify.org?format=json", {
-      method: "GET",
-    });
-    ip = await res.json();
-    navigator.geolocation.getCurrentPosition((position) => {
-      console.log(position.coords.latitude, position.coords.longitude);
-      latitude = position.coords.latitude;
-      longitude = position.coords.longitude;
-      console.log("test: ", latitude, longitude);
-    });
-    console.log(ip);
-    const deviceInfo = {
-      userAgent: navigator.userAgent,
-      screenWidth: window.screen.width,
-      screenHeight: window.screen.width,
-      userAgent: navigator.userAgent,
-    };
-    console.log(deviceInfo);
-    data = { deviceInfo };
-  });
 </script>
 
 <main
   class=" scroll-smooth w-screen snap-mandatory overflow-x-hidden overflow-y-scroll flex flex-col items-center"
 >
   <section
-    class="w-5/12 h-[70em] snap-center flex flex-col justify-center space-y-10 text-text"
+    class="w-5/12 h-screen flex flex-col justify-center space-y-10 text-text"
   >
     <div>
       <h3 class="text-3xl">Hei jeg heter</h3>
@@ -68,7 +41,7 @@
     id="om-meg"
     class="w-8/12 h-screen flex flex-col items-center justify-center snap-start"
   >
-    <div class="w-1/6 h-1/6 flex flex-col space-y-2">
+    <div class="w-3/6 h-1/6 flex flex-col space-y-2">
       <h2 class="text-text text-5xl">Om meg</h2>
       <span class="text-text text-xl"
         >Jeg går IMIT på Elvebakken vgs. Jeg liker å løse problemer ved bruk av
@@ -81,12 +54,14 @@
     class="w-8/12 h-screen flex flex-col space-y-8 items-center justify-center snap-start"
   >
     <h2 class="text-text text-6xl">Mine prosjekter</h2>
-    <div class="flex space-x-8 items-center justify-center">
+    <div class="flex space-x-8 items-start justify-center">
       <a href="https://github.com/korneliushen/handlelapp">
         <div
-          class="h-80 w-96 border-primary border-2 rounded-3xl flex flex-col space-y-3 p-5"
+          class="h-80 w-96 border-primary border-2 rounded-3xl flex flex-col space-y-3 p-5 group"
         >
-          <h3 class="text-text underline decoration-accent text-4xl">
+          <h3
+            class="text-text text-4xl group-hover:underline group-hover:decoration-accent"
+          >
             Handlelapp
           </h3>
           <span class="text-text text-lg">
@@ -102,31 +77,27 @@
       </a>
       <a href="https://github.com/korneliushen/geoguessr-extension">
         <div
-          class="h-80 w-96 border-primary border-2 rounded-3xl flex flex-col space-y-3 p-5"
+          class="min-h-80 w-96 border-primary border-2 rounded-3xl flex flex-col space-y-3 p-5 group"
         >
-          <h3 class="text-text underline decoration-accent text-4xl">
+          <h3
+            class="text-text text-4xl group-hover:underline group-hover:decoration-accent"
+          >
             Geoguessr Chrome extension
           </h3>
           <span class="text-text text-lg">
             Chrome extension for å lagre geoguessr games slik at man enklere kan
             være med
           </span>
-          <img class="text-text" alt="Ingen bilder ennå" border="0" />
+          <img
+            class="rounded"
+            src="https://i.ibb.co/kS6cQZq/Screenshot-2024-05-06-at-10-01-47.png"
+            alt="Screenshot-2024-05-06-at-10-01-47"
+            border="0"
+          />
         </div>
       </a>
     </div>
   </section>
-  <h1 class="text-text">Your ip and other stats</h1>
-  <p class="text-text">{ip.ip}</p>
-  <p class="text-text">{data.deviceInfo.userAgent}</p>
-  <p class="text-text">
-    {latitude}, {longitude}
-  </p>
-  <a
-    href="https://www.google.com/maps/search/{latitude}+{longitude}/@59.9187137,10.7536475,17z?entry=ttu"
-  >
-    <button class="h-24 w-44 bg-accent rounded-full">Track yourself</button>
-  </a>
 </main>
 
 <style lang="postcss">
