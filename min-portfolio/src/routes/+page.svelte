@@ -44,7 +44,7 @@
     <div class="w-3/6 h-1/6 flex flex-col space-y-2">
       <h2 class="text-text text-5xl">Om meg</h2>
       <span class="text-text text-xl"
-        >Jeg går IMIT på Elvebakken vgs. Jeg liker å løse problemer ved bruk av
+        >Jeg er lærling hos Statnett SF. Jeg liker å løse problemer ved bruk av
         webutvikling og utvikle morsomme og nyttige applikasjoner
       </span>
     </div>
@@ -55,22 +55,22 @@
   >
     <h2 class="text-text text-6xl">Mine prosjekter</h2>
     <div class="flex space-x-8 items-start justify-center">
-      <a href="https://github.com/korneliushen/handlelapp">
+      <a href="https://github.com/korneliushen/handlel.app">
         <div
           class="h-80 w-96 border-primary border-2 rounded-3xl flex flex-col space-y-3 p-5 group"
         >
           <h3
             class="text-text text-4xl group-hover:underline group-hover:decoration-accent"
           >
-            Handlelapp
+            Handlel.app
           </h3>
           <span class="text-text text-lg">
             Nettside for å sjekke pris på daglivarer
           </span>
           <img
             class="rounded"
-            src="https://i.ibb.co/zVmNB2t/handlelapp-forside.webp"
-            alt="handlelapp-forside"
+            src="https://i.ibb.co/F4DhYRBG/Screenshot-2025-10-30-185224.webp"
+            alt="handlelapp-søk"
             border="0"
           />
         </div>
