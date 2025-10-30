@@ -21,7 +21,7 @@
       </div>
       <div class="flex items-center space-x-2">
         <BxsSchool class="w-9 h-9 text-accent" />
-        <p class="text-2xl">Elvebakken</p>
+        <p class="text-2xl">Statnett SF</p>
       </div>
     </div>
     <div class="space-x-4">
@@ -57,7 +57,7 @@
     <div class="flex space-x-8 items-start justify-center">
       <a href="https://github.com/korneliushen/handlel.app">
         <div
-          class="h-80 w-96 border-primary border-2 rounded-3xl flex flex-col space-y-3 p-5 group"
+          class="min-h-80 w-96 border-primary border-2 rounded-3xl flex flex-col space-y-3 p-5 group"
         >
           <h3
             class="text-text text-4xl group-hover:underline group-hover:decoration-accent"
